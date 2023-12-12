@@ -565,20 +565,99 @@
         cout << ans;
     }
 
-Problem: Week 1 - Text Replacement
-Description
-Cho văn bản T và 2 mẫu P1, P2 đều là các xâu ký tự (không chứa ký tự xuống dòng, độ dài không vượt quá 1000). Hãy thay thế các xâu P1 trong T bằng xâu P2.
-Dữ liệu
-· Dòng 1: xâu P1
-· Dòng 2: xâu P2
-· Dòng 3: văn bản T
-Kết quả:
-· Ghi văn bản T sau khi thay thế
-Ví dụ
-Dữ liệu
-AI
-Artificial Intelligence
-Recently, AI is a key technology. AI enable efficient operations in many fields.
-Kết quả
-Recently, Artificial Intelligence is a key technology. Artificial Intelligence enable efficient operations in many fields.
-Source code
+> ### Problem: Week 1 - Text Replacement
+#### Description:
+    Cho văn bản T và 2 mẫu P1, P2 đều là các xâu ký tự (không chứa ký tự xuống dòng, độ dài không vượt quá 1000). Hãy thay thế các xâu P1 trong T bằng xâu P2.
+    Dữ liệu
+    · Dòng 1: xâu P1
+    · Dòng 2: xâu P2
+    · Dòng 3: văn bản T
+    Kết quả:
+    · Ghi văn bản T sau khi thay thế
+    Ví dụ
+    Dữ liệu
+    AI
+    Artificial Intelligence
+    Recently, AI is a key technology. AI enable efficient operations in many fields.
+    Kết quả
+    Recently, Artificial Intelligence is a key technology. Artificial Intelligence enable efficient operations in many fields.
+    
+#### Source code:
+    // //C++ 
+    #include <bits/stdc++.h> 
+    #define MAX 100001
+    using namespace std;
+    
+    int substrPosition(string str, string sub_str, int pos[]) {
+        int dx = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if (str.substr(i, sub_str.length()) == sub_str) {
+                pos[dx] = i; 
+                dx++;
+            }
+        }
+        return dx;
+    }
+    int main() {
+        string sub_str;
+        getline(cin, sub_str, '\n');
+        string strrep;
+        getline(cin, strrep, '\n');
+        string str;
+        getline(cin, str, '\n');
+        int pos[MAX];
+        int index = substrPosition(str, sub_str, pos);
+        for (int i = index - 1; i >= 0; i--){
+            str.replace(pos[i], sub_str.length(), strrep);
+        }
+        cout << str << endl;
+    }
+
+> ### Problem: Week 1 - Solve degree-2 polynomial equation
+#### Description:
+    Given an equation ax^2 + bx + c = 0. Find solution to the given equation.
+    Input
+    Line 1 contains 3 integers a, b, c 
+    Output
+    Write NO SOLUTION if the given equation has no solution 
+    Write x0 (2 digits after the decimal point) if the given equation has one solution x0 
+    Write x1 and x2 with x1 < x2 (2 digits after the decimal point) if the given equation has two distinct solutions x1, x2 
+    
+    Example
+    Input 
+    1 1 8
+    Output 
+    NO SOLUTION 
+    
+    
+    Input 
+    1 -2 1
+    Output
+    1.00
+    
+    Input 
+    1 -7 10
+    Output 
+    2.00 5.00
+
+#### Source code:
+    //C++ 
+    #include <bits/stdc++.h> 
+    
+    using namespace std;
+    
+    int main() 
+    { 
+        int a, b ,c;
+        cin >> a >> b >> c;
+        long delta = b*b - 4*a*c;
+        if (delta < 0) {
+            cout << "NO SOLUTION" << "\n";
+        }else if (delta == 0){
+            cout << fixed << setprecision(2) << (double)(-b) / 2/ a << "\n";
+        }else{
+            cout << fixed << setprecision(2) << (double)(-b - sqrt(delta))/2/a << " " << (-b + sqrt(delta))/2/a << "\n";
+        }
+    }
+
+
