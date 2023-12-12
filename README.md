@@ -133,5 +133,47 @@
         cout << fixed << setprecision(2) << (new_price(n)-old_price(n))*1.1 << endl;
         return 0;
     }
+    
+> ### Problem: Week 1 - Convert a TEXT to Upper-Case
+#### Description:
+    Given a TEXT, write a program that converts the TEXT to upper-case. 
+    
+    Input
+    The TEXT
+    
+    Output
+    The TEXT in which characters are converted into upper-case
+    
+    Example 
+    Input 
+    Hello John,
+    How are you?
+    
+    Bye,
+    
+    Output 
+    HELLO JOHN,
+    HOW ARE YOU?
+    
+    BYE, 
+
+#### Source code:
+    #include <bits/stdc++.h>
+    #include <cstring>
+    using namespace std;
+    
+    void upper(string &s){
+    	for (int i = 0; i < s.length(); i++){
+    		s[i] = toupper(s[i]);
+    	}
+    }
+    
+    int main() {
+        string s;
+        while(getline(cin, s)){
+            upper(s);
+            cout << s << "\n";
+        }
+    }
 
     
