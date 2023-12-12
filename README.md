@@ -3,6 +3,96 @@
 > ## Làm quen với GitHub
 
 > ### GitHub là gì ?
+   * GitHub là một dịch vụ cung cấp kho lưu trữ mã nguồn Git dựa trên nền web cho các dự án phát triển phần mềm. Link web: https://github.com/
+
+   * Github đã trở thành một yếu tố có sức ảnh hưởng trong cộng đồng phát triển mã nguồn mở. Thậm chí nhiều nhà phát triển đã bắt đầu xem nó là một sự thay thế cho sơ yếu lý lịch và một số nhà tuyển dụng yêu cầu các ứng viên cung cấp một liên kết đến tài khoản Github để đánh giá ứng viên.
+
+   * Git là hệ thống kiểm soát phiên bản mã nguồn mở được sử dụng phổ biến cho các dự án lớn và nhỏ. GitHub là Git Server, nơi mọi người chia sẻ và cộng tác trên mã nguồn họ tạo ra. GitHub sử dụng hệ thống kiểm soát phiên bản là Git. GitHub đơn giản hoá việc sử dụng Git mà không cần tới giao diện dòng lệnh.
+
+   Tìm hiểu thêm ở đây: https://vi.wikipedia.org/wiki/GitHub
+
+> ### Cách dùng Git/GitHub
+   * Trước tiên, ta phải tải Git:
+     
+      MacOS:
+         https://git-scm.com/download/mac
+
+      Window
+         https://git-scm.com/download/win
+
+      Linux
+         https://git-scm.com/download/linux
+
+   * Các lệnh cơ bản:
+   
+      git init: Tạo Git repository tại nơi chưa project
+
+      ![image](https://github.com/HungHyperX/Project1-Week1/assets/131465286/53489d92-e9c9-47af-a30e-f4e60998a8bf)
+
+      git status: xem trạng thái các file
+
+      git remote: kiểm tra xem remote/source bạn có chưa nếu chưa có sẽ add thêm remote. VD: git remote add origin <remote_url>
+
+      git clone: tải xuống mã nguồn hiện có từ một remote repository
+     
+      git pull: nhận các bản cập nhật từ từ xa từ một remote repository
+
+      
+      git add <file của bạn> và git add . : thêm file hoặc tất cả file vào repo
+     
+      git commit: ghi lại các thay đổi tệp trong lịch sử Git của kho lưu trữ
+     
+      git push: đẩy các commit và thay đổi từ máy tính của bạn lên một remote repository
+
+      ![image](https://github.com/HungHyperX/Project1-Week1/assets/131465286/1ebc5029-2d7c-43f7-8c69-20b30c62d8a4)
+
+      git log: xem lịch sử của kho lưu trữ bằng cách liệt kê các chi tiết của các commit
+     
+      git log —decorate —graph —oneline
+
+
+      git branch: liệt kê tất cả các nhánh trong hệ thống, hoặc tạo nhánh
+     
+      git checkout: cập nhật các tệp trong cây làm việc của bạn để khớp với phiên bản được lưu trữ trong nhánh mà bạn muốn chuyển sang
+
+      git merge: gộp hai branch lại với nhau, thao tác này thường dùng để merge branch khác vào branch master trước khi push lên remote repository , hoặc merge hai branch thành một để giải quyết chung một task
+     ![84f47fd1-a009-4beb-8957-26395fe1](https://github.com/HungHyperX/Project1-Week1/assets/131465286/d458c6a0-0d63-4dc4-a072-a500730a5604)
+
+
+   * Có thể gõ lệnh ở Terminal tại project trong IDE của bạn nếu có hoặc là dùng GitBash như sau:
+
+      ![image](https://github.com/HungHyperX/Project1-Week1/assets/131465286/c0b6ebc6-2b6d-42cb-94d6-99bf806a2492)
+
+     Giao diện GitBash:
+
+      ![image](https://github.com/HungHyperX/Project1-Week1/assets/131465286/49f3c86f-3791-4934-b100-f76246a4f276)
+
+> ### Ưu điểm
+
+* Được sử dụng phổ biến: Trong số các Github Server thì GitHub được coi là nền tảng phổ biến nhất và được ưa thích nhất với 4 triệu tổ chức và hơn 100 triệu nhà phát triển. Lý do ngoài việc sử dụng dễ dàng thì còn vì những tính năng như lưu trữ mã nguồn miễn phí, kiểm soát phiên bản phân tán, tạo project và tích hợp các nền tảng CI/CD phổ biến như Travis CI và Jenkins.
+* Có cộng đồng đông đảo: GitHub có một cộng đồng các nhà phát triển lớn mạnh và năng động, khiến nó trở thành một nơi tuyệt vời để khám phá và đóng góp cho các dự án nguồn mở.
+* Về phương diện bảo mật: Github cung cấp các tính năng như quét mã nguồn và phân tích dependency, giúp cải thiện tính bảo mật của mã nguồn.
+* Về phương diện lưu trữ mã: GitHub cung cấp nền tảng để lưu trữ mã nguồn của bạn và cộng đồng nhà phát triển toàn cầu có thể truy cập được chúng một cách dễ dàng.
+* Về phương diện hợp tác: Github tạo điều kiện cho sự hợp tác giữa các nhà phát triển bằng cách cho phép nhiều người có thể đồng thời đóng góp trên cùng một dự án.
+
+> ### Nhược điểm
+
+* Mất phí cho các private repository: Mặc dù GitHub cung cấp các public repository miễn phí, nhưng các kho lưu trữ riêng tư có thể phải chịu chi phí, đây có thể là một hạn chế đối với một số người dùng hoặc tổ chức.
+* Phụ thuộc vào dịch vụ tập trung: Do GitHub là một nền tảng tập trung, nên nếu có sự cố xảy ra với dịch vụ của GitHub thì công việc của bạn cũng sẽ bị ảnh hưởng.
+* Đường cong học tập: Mặc dù bản thân GitHub là một công cụ rất dễ sử dụng nhưng Git thì lại không dễ học với người dùng mới. Việc hiểu các khái niệm và lệnh Git có thể mất thời gian.
+* Giới hạn kích thước file: GitHub có những hạn chế về kích thước từng file và tổng kích thước của repository, đây có thể là một vấn đề đối với các dự án lớn.
+
+> ### Quan điểm của bản thân sau khi làm quen với GitHub:
+
+#### Ngoài những ưu và nhược điểm nêu trên thì tôi cũng có một vài ý kiến sau: 
+* Ban đầu làm quen với việc dùng GitHub khá khó, tìm nguồn hướng dẫn cũng khó không kém nếu không có ai hướng dẫn sẵn. Đây là link video mà mình nghĩ mấy bạn mới làm quen có thể xem và dễ tiếp cận: https://www.youtube.com/watch?v=1JuYQgpbrW0
+* Sau khi làm quen và trải qua vài lỗi, xung đột, hay thất bại thì mình cũng dần quen và cảm thấy làm việc trên GitHub rất chuyên nghiệp. Dễ quản lý dự án khi làm cả cá nhân hay nhóm, tập thể bởi khả năng phân chia, linh hoạt, dễ dàng chỉnh sửa nếu đã biết sử dụng
+* Tôi cho rằng việc sử dụng GitHub sẽ cải thiện năng suất công việc, tăng tính chuyên nghiệp và giúp ích rất nhiều cho tương lai
+
+    
+      
+   
+   
 
 > ## Project 1 - Week 1
 
