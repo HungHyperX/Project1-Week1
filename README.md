@@ -24,7 +24,7 @@
     14
     
     Source code:
-    ```cpp
+    
     #include <bits/stdc++.h> 
     #define MAX 1000000
     
@@ -41,4 +41,4 @@
     	}
     	cout << sum << endl;
     }
-    ```
+
